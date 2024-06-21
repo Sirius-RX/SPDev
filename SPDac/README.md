@@ -2,23 +2,34 @@
 
 [TOC]
 
+## Driver Installation
+
+#### Windows：
+
+1. 下载安装Python
+2. 
+
+#### Linux：
+
+1. 使用包管理器安装Python
+
 ## SCPI Commands
 
 ------
 
 - #### *IDN?
 
-​	描述：ID请求命令，返回设备名、型号类型、设备序列码等
+	描述：ID请求命令，返回设备名、型号类型、设备序列码等
 
-​	语法：*IDN?
+	语法：*IDN?
 
-​	参数：无
+	参数：无
 
-​	举例：>*IDN?
-
-​		   SPDev,SPDAC,SP-0001,BySirus_P-1.00
-
-​	注释：无
+	举例：>*IDN?
+	
+		SPDev,SPDAC,SP-0001,BySirus_P-1.00
+	
+	注释：无
 
 ------
 
