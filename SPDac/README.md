@@ -1,5 +1,7 @@
 # SPDac
 
+[TOC]
+
 ## SCPI Commands
 
 - #### *IDN?
@@ -36,7 +38,7 @@
 
 ​	注释：如果正负5V的输出电压范围足够某次应用，请优先使用低电压测量范围。另外每当输出电压范围切换时，输出电压会有变为原来的2倍(LOW->HIGH)或者变为原来的1/2(HIGH->LOW)的情况。当某一次应用中需要更换测量量程时，推荐将所有的输出电压归零后再调整输出电压范围。此缺陷也许能在后续的硬件迭代中解决，软件能够消除输出电压的变化，但是无法消除范围切换时的电压跳变(假设LOW下输出电压为2V，实际电压变化为2V->1V->2V，电压还是会有突变)。
 
-- ##### SOURce:VOLTage:OUTPut
+- #### SOURce:VOLTage:OUTPut
 
 ​	描述：改变或返回某一个通道输出电压的状态
 
@@ -58,7 +60,7 @@
 
 ​	注释：为保证待测设备的安全，所有通道在上电状态默认为clamped6k（输出6k电阻下拉到GND），需要输出电压前请执行此命令将输出电压状态更改为normal模式。
 
-- ##### SOURce:VOLTage:MODE
+- #### SOURce:VOLTage:MODE
 
   描述：改变或返回某一个通道的工作模式
 
@@ -80,7 +82,7 @@
 
   注释：目前单单只实现了FIXed模式，SWEep模式和LIST模式现在都没有用，所以这个command没啥用。
 
-- ##### SOURce:VOLTage:IMMediate
+- #### SOURce:VOLTage:IMMediate
 
 ​	描述：改变或返回一个通道的固定输出电压（FIXed工作模式）
 
@@ -96,7 +98,7 @@
 
 ​	注释：因为numeric_value传入的参数为float类型传入参数，请不要传入有效位数超过8位的参数
 
-- ##### SOURce:VOLTage:LAST?
+- #### SOURce:VOLTage:LAST?
 
 ​	描述：返回一个通道上一次设定的输出电压
 
@@ -110,7 +112,7 @@
 
 ​	注释：无
 
-- ##### MEASure:VOLTage:DC?
+- #### MEASure:VOLTage:DC?
 
 ​	描述：返回ADC采样通道换算后的电压值
 
