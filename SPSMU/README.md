@@ -1,11 +1,19 @@
 # SPSMU
 
 - [SPSMU](#spsmu)
+  - [Version](#version)
   - [Connect](#connect)
   - [SCPI Commands](#scpi-commands)
 
+## Version
+2024/06/22 First update
+
 ## Connect
 设备支持仪器通用可编程仪器标准指令(SCPI)，通过USB串口与设备进行连接，可以通过MATLAB、PyVISA等工具进行控制，如果需要直接使用串口工具控制，推荐使用[Tabby](https://github.com/Eugeny/tabby "一个十分好用的现代终端模拟器")。
+
+> [!NOTE]
+> 
+> 随着设备连接的电脑不同，设备对应的端口号可能会发生改变，需要根据设备实际的端口号进行连接。
 
 ## SCPI Commands
 

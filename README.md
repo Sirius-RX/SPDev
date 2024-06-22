@@ -1,12 +1,43 @@
 # SPDev
 
 - [SPDev](#spdev)
+  - [File tree](#file-tree)
   - [SPDac](#spdac)
   - [SPSMU](#spsmu)
 
 This repository stores some manuals about SPDev series devices 
 
 manuals store in each device folder
+
+## File tree
+    .
+    ├── README.md
+    ├── SPDac
+    │   ├── examples
+    │   │   ├── SPDac_AWG.py
+    │   │   ├── SPDac_connect.py
+    │   │   └── SPDac_sweep.py
+    │   ├── README.md
+    │   ├── SPDac_env_cfg.bat
+    │   ├── SPDac_env_cfg.md
+    │   └── SPDac_env_cfg.sh
+    ├── SPDev
+    │   ├── __init__.py
+    │   ├── __pycache__
+    │   │   ├── __init__.cpython-311.pyc
+    │   │   ├── __init__.cpython-312.pyc
+    │   │   ├── __init__.cpython-39.pyc
+    │   │   ├── SPDAC.cpython-311.pyc
+    │   │   ├── SPDAC.cpython-312.pyc
+    │   │   └── SPDAC.cpython-39.pyc
+    │   └── SPDAC.py
+    └── SPSMU
+        ├── examples
+        │   ├── SPSmu_test_curr.py
+        │   ├── SPSmu_test_hizi.py
+        │   ├── SPSmu_test_hizv.py
+        │   └── SPSmu_test_volt.py
+        └── README.md
 
 ## SPDac
 

@@ -39,7 +39,7 @@ spdac.ch03.dc_constant_V(1.114514)
 spdac.ch04.dc_constant_V(1.114514)
 
 # get adc sampling value
-# spdac.ch01.ad_sample_V()
-# spdac.ch02.ad_sample_V()
-# spdac.ch03.ad_sample_V()
-# spdac.ch04.ad_sample_V()
+spdac.ch01.ad_sample_V()
+spdac.ch02.ad_sample_V()
+spdac.ch03.ad_sample_V()
+spdac.ch04.ad_sample_V()

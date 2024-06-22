@@ -1,23 +1,35 @@
 # SPDac
 
 - [SPDac](#spdac)
+  - [Version](#version)
   - [Driver Installation](#driver-installation)
       - [Windows：](#windows)
       - [Linux：](#linux)
+  - [Connect](#connect)
   - [SCPI Commands](#scpi-commands)
   - [QCoDeS Functions](#qcodes-functions)
+
+## Version
+2024/06/22 First update
 
 ## Driver Installation
 
 #### Windows：
 
-1. 下载安装Python
+1. 下载安装[Python](https://www.python.org/downloads/ "python 官网下载")
 2. 双击SPDac_env_cfg.bat，等待命令执行完后按任意键退出完成QCoDeS Driver配置
 
 #### Linux：
 
 1. 使用包管理器安装Python
 2. 执行SPDac_env_cfg.sh脚本完成QCoDeS Driver配置
+
+## Connect
+设备支持仪器通用可编程仪器标准指令(SCPI)，通过USB串口与设备进行连接，可以通过MATLAB、PyVISA等工具进行控制，如果需要直接使用串口工具控制，推荐使用[Tabby](https://github.com/Eugeny/tabby "一个十分好用的现代终端模拟器")。
+
+> [!NOTE]
+> 
+> 随着设备连接的电脑不同，设备对应的端口号可能会发生改变，需要根据设备实际的端口号进行连接。
 
 ## SCPI Commands
 
@@ -271,8 +283,17 @@ MEASure:VOLTage[:DC]? [channel]
 举例：
 
 > spdac.ch01.print_readable_snapshot(update=1)
->
-> ``
+> 
+>     SPDAC_ch01:
+>             parameter           value
+>     --------------------------------------------------------------------------------
+>     ad_sample_V          :  1.6503 (V)
+>     dc_constant_V        :  0 (V)
+>     dc_last_V            :  0 (V)
+>     dc_mode              :  "FIXed"
+>     dc_slew_rate_V_per_s :  None (V/s)
+>     output_range         :  "LOW"
+>     output_state         :  "NORMal"
 
 > [!NOTE]
 >
