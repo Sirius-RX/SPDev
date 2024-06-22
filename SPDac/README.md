@@ -171,9 +171,9 @@ SOURce:VOLTage:LAST? [channel]
 
 描述：返回ADC采样通道换算后的电压值
 
-语法：MEASure:VOLTage[:DC]? [channel]
+语法：
 
-参数：无
+MEASure:VOLTage[:DC]? [channel]
 
 举例：
 
@@ -188,3 +188,87 @@ SOURce:VOLTage:LAST? [channel]
 ## QCoDeS Functions
 
 ------
+
+- #### output_mode
+
+描述：设置通道输出电压的范围以及输出模式
+
+语法：
+
+[device].ch[channel].output_mode(range, state)
+
+| 参数  | 对应效果 |
+| :---: | :------: |
+|  LOW  |  正负5V  |
+| HIGH  | 正负10V  |
+
+|   参数    |        对应效果         |
+| :-------: | :---------------------: |
+|  NORMal   |      普通输出模式       |
+| CLAMped6k | 输出通过6k电阻下拉至GND |
+| TRIState  |       输出高阻态        |
+
+举例：
+
+> spdac.ch01.output_mode(range="low", state="normal")
+
+> [!NOTE]
+>
+> 函数中range与state参数分别默认为low、high，也就是说调用函数spdac.ch01.output_mode(range="low", state="normal")与函数spdac.ch01.output_mode()是等效的。
+
+- #### dc_constant_V
+
+描述：设置通道输出电压值
+
+语法：
+
+[device].ch[channel].dc_constant_V(voltage)
+
+举例：
+
+> spdac.ch01.dc_constant_V(1.114514)
+
+> [!NOTE]
+>
+> 请不要传入有效位数超过8位的参数，在传入电压参数时可以使用round(voltage, 6)进行小数点位数的限制
+
+- #### ad_sample_V
+
+描述：返回ADC通道采样值
+
+语法：
+
+[device].ch[channel].ad_sample_V()
+
+举例：
+
+> spdac.ch01.ad_sample_V()
+>
+> `1.114514`
+
+> [!NOTE]
+>
+> none
+
+- #### print_readable_snapshot
+
+描述：打印通道的工作信息
+
+语法：
+
+[device].ch[channel].print_readable_snapshot(update=[boolen])
+
+| update |         对应效果         |
+| :----: | :----------------------: |
+|   0    | 显示上次更新时获得的结果 |
+|   1    |      更新结果并显示      |
+
+举例：
+
+> spdac.ch01.print_readable_snapshot(update=1)
+>
+> ``
+
+> [!NOTE]
+>
+> 此函数在高速重复调用时会出现显示文字框位置变化的bug，目前为未解之谜，请不要高速循环调用此函数
