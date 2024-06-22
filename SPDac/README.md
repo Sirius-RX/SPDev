@@ -7,11 +7,12 @@
 #### Windows：
 
 1. 下载安装Python
-2. 
+2. 双击SPDac_env_cfg.bat，等待命令执行完后按任意键退出完成QCoDeS Driver配置
 
 #### Linux：
 
 1. 使用包管理器安装Python
+2. 执行SPDac_env_cfg.sh脚本完成QCoDeS Driver配置
 
 ## SCPI Commands
 
@@ -36,7 +37,6 @@
 ------
 
 - #### SOURce:VOLTage:RANGe
-
 
 描述：输出或读取每个电压输出通道的输出电压范围
 
