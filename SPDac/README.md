@@ -28,8 +28,8 @@
 举例：
 
 > *IDN?
-
-`SPDev,SPDAC,SP-0001,BySirus_P-1.00`
+> 
+> `SPDev,SPDAC,SP-0001,BySirus_P-1.00`
 
 注释：无
 
@@ -56,8 +56,8 @@ SOURce[:VOLTage]:RANGe? [channel]
 > SOUR:RANG 1,LOW	- 设置1通道的输出电压范围为低范围（正负5V）
 
 > SOUR:RANG? 1	       - 返回通道1的输出电压范围状态 
-
-`` "LOW"``
+> 
+> `"LOW"`
 
 > [!NOTE]
 >
@@ -86,8 +86,8 @@ SOURce[:VOLTage]:OUTPut? [channel]
 > SOUR:OUTP 1,NORM	- 设置1通道正常输出电压
 
 > SOUR:OUTP? 1		  - 返回通道1输出电压状态
-
-``"NORMal"``
+> 
+> `"NORMal"`
 
 > [!NOTE]
 > 
@@ -113,11 +113,11 @@ SOURce[:VOLTage]:MODE? [channel]
 
 举例：
 
->SOUR:MODE 1,FIX	- 设置1通道工作在固定输出电压模式
+> SOUR:MODE 1,FIX	- 设置1通道工作在固定输出电压模式
 
->SOUR:MODE? 1	    - 返回通道1输出电压模式
-
-`"FIXed"`
+> SOUR:MODE? 1	    - 返回通道1输出电压模式
+> 
+> `"FIXed"`
 
 > [!NOTE]
 > 
@@ -135,11 +135,11 @@ SOURce:VOLTage[:IMMediate] [channel],[numeric_value]
 
 举例：
 
->SOUR:VOLT 1,1.114514	- 设置1通道输出电压1.114514V
+> SOUR:VOLT 1,1.114514	- 设置1通道输出电压1.114514V
 
->SOUR:VOLT? 1		      - 返回通道1当前设置的电压值
-
-`1.114514`
+> SOUR:VOLT? 1		      - 返回通道1当前设置的电压值
+> 
+> `1.114514`
 
 > [!NOTE]
 > 
@@ -157,9 +157,9 @@ SOURce:VOLTage:LAST? [channel]
 
 举例：
 
->SOUR:VOLT:LAST?
-
-`1.114514`
+> SOUR:VOLT:LAST?
+> 
+> `1.114514`
 
 > [!NOTE]
 > 
@@ -177,9 +177,9 @@ SOURce:VOLTage:LAST? [channel]
 
 举例：
 
->MEAS:VOLT? 1
-
-`1`
+> MEAS:VOLT? 1
+> 
+> `1`
 
 > [!NOTE]
 >
