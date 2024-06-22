@@ -256,7 +256,7 @@ MEASure:VOLTage[:DC]? [channel]
 
 语法：
 
-[device].ch[channel].print_readable_snapshot(update=[boolen])
+[device].ch[channel].print_readable_snapshot(update=[boolean])
 
 | update |         对应效果         |
 | :----: | :----------------------: |
