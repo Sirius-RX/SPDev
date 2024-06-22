@@ -1,5 +1,5 @@
 @echo off
-set "source_folder=%~dp0SPDev"
+set "source_folder=%~dp0..\SPDev"
 
 pip install qcodes qcodes_contrib_drivers pyvisa pyvisa-py pyusb pyudev pyserial zeroconf 
 
