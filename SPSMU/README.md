@@ -2,11 +2,21 @@
 
 - [SPSMU](#spsmu)
   - [Version](#version)
+  - [Driver Installation](#driver-installation)
+      - [Windows：](#windows)
   - [Connect](#connect)
   - [SCPI Commands](#scpi-commands)
 
 ## Version
 2024/06/22 First update
+2024/06/24 Update CH343 serial chip driver
+
+## Driver Installation
+
+#### Windows：
+
+1. 双击安装目录下的CH343SER.EXE，下一步直至安装完成
+2. 使用任意软件连接设备
 
 ## Connect
 设备支持仪器通用可编程仪器标准指令(SCPI)，通过USB串口与设备进行连接，可以通过MATLAB、PyVISA等工具进行控制，如果需要直接使用串口工具控制，推荐使用[Tabby](https://github.com/Eugeny/tabby "一个十分好用的现代终端模拟器")。

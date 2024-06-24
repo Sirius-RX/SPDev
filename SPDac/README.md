@@ -11,13 +11,15 @@
 
 ## Version
 2024/06/22 First update
+2024/06/24 Update FPGA serial chip driver
 
 ## Driver Installation
 
 #### Windows：
 
 1. 下载安装[Python](https://www.python.org/downloads/ "python 官网下载")
-2. 双击SPDac_env_cfg.bat，等待命令执行完后按任意键退出完成QCoDeS Driver配置
+2. 双击安装目录下的CDM212364_Setup.exe，下一步直至安装完成
+3. 双击SPDac_env_cfg.bat，等待命令执行完后按任意键退出完成QCoDeS Driver配置
 
 #### Linux：
 
