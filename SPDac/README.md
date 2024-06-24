@@ -11,6 +11,7 @@
 
 ## Version
 2024/06/22 First update
+
 2024/06/24 Update FPGA serial chip driver
 
 ## Driver Installation
@@ -26,7 +27,7 @@
 1. 使用包管理器安装Python
 2. 执行SPDac_env_cfg.sh脚本完成QCoDeS Driver配置
 
-> [!NOTE]
+> [!WARNING]
 >
 > 如果系统中安装过anaconda或使用conda管理不同的python环境的话，SPDac_env_cfg环境安装脚本默认将Python环境安装在base环境下。
 

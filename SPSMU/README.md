@@ -9,6 +9,7 @@
 
 ## Version
 2024/06/22 First update
+
 2024/06/24 Update CH343 serial chip driver
 
 ## Driver Installation
