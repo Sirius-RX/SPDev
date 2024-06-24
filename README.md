@@ -57,7 +57,7 @@ this folder stores device's QCoDeS driver
 
 SPDac is a device which can output 2 channel precision voltage & measure 4 channel SMA input voltage
 
-SPDac manual is stored in SPDac folder(store as README.md), please click *SPDac* to read it
+SPDac manual is stored in SPDac folder(stored as README.md), please click [***SPDac***](./SPDac) to read it
 
 ![AD5781_rendered](./assets/AD5781_rendered.png "SPDac渲染图")
 
@@ -79,7 +79,7 @@ SPDac manual is stored in SPDac folder(store as README.md), please click *SPDac*
 
 SPSMU is a 16 channel source measure unit device.
 
-SPSMU manual is stored in SPSMU folder(store as README.md), please click *SPSMU* to read it
+SPSMU manual is stored in SPSMU folder(stored as README.md), please click [***SPSMU***](./SPSMU) to read it
 
 <!-- ![AD5522.21](./assets/AD5781.21.png "SPSMU渲染图") -->
 
