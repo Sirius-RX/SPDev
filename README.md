@@ -13,6 +13,7 @@ manuals store in each device folder
     .
     ├── README.md
     ├── SPDac
+    │   ├── CDM212364_Setup.exe
     │   ├── examples
     │   │   ├── SPDac_AWG.py
     │   │   ├── SPDac_connect.py
@@ -32,6 +33,7 @@ manuals store in each device folder
     │   │   └── SPDAC.cpython-39.pyc
     │   └── SPDAC.py
     └── SPSMU
+        ├── CH343SER.EXE
         ├── examples
         │   ├── SPSmu_test_curr.py
         │   ├── SPSmu_test_hizi.py
