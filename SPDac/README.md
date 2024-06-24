@@ -26,6 +26,10 @@
 1. 使用包管理器安装Python
 2. 执行SPDac_env_cfg.sh脚本完成QCoDeS Driver配置
 
+> [!NOTE]
+>
+> 如果系统中安装过anaconda或使用conda管理不同的python环境的话，SPDac_env_cfg环境安装脚本默认将Python环境安装在base环境下。
+
 ## Connect
 设备支持仪器通用可编程仪器标准指令(SCPI)，通过USB串口与设备进行连接，可以通过MATLAB、PyVISA等工具进行控制，如果需要直接使用串口工具控制，推荐使用[Tabby](https://github.com/Eugeny/tabby "一个十分好用的现代终端模拟器")。
 
