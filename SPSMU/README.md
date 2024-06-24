@@ -4,10 +4,13 @@
   - [Version](#version)
   - [Driver Installation](#driver-installation)
       - [Windows：](#windows)
+      - [Linux：](#linux)
   - [Connect](#connect)
+  - [Examples](#examples)
   - [SCPI Commands](#scpi-commands)
 
 ## Version
+
 2024/06/22 First update
 
 2024/06/24 Update CH343 serial chip driver
@@ -19,12 +22,36 @@
 1. 双击安装目录下的CH343SER.EXE，下一步直至安装完成
 2. 使用任意软件连接设备
 
+#### Linux：
+
+- Linux系统一般自带CH343驱动，无需额外安装
+
 ## Connect
 设备支持仪器通用可编程仪器标准指令(SCPI)，通过USB串口与设备进行连接，可以通过MATLAB、PyVISA等工具进行控制，如果需要直接使用串口工具控制，推荐使用[Tabby](https://github.com/Eugeny/tabby "一个十分好用的现代终端模拟器")。
 
+Tabby连接串口的推荐设置如下图流程所示：
+
+1. 进入设置后点击配置和连接后点击高级设置
+
+![Tabby_setting](../assets/Tabby高级设置.png "Tabby 高级设置界面")
+
+2. 点击串口(serial)进入子菜单设定
+
+![Tabby_serial_default](../assets/Tabby串口设置.png "Tabby 串口设置界面")
+
+3. 设置输入模式为逐行(Line by line)
+
+![Tabby_serial_mode](../assets/Tabby串口逐行.png "Tabby 串口设置界面设置输入模式为逐行")
+
 > [!NOTE]
 > 
+> 设备串口波特率921600。
+> 
 > 随着设备连接的电脑不同，设备对应的端口号可能会发生改变，需要根据设备实际的端口号进行连接。
+
+## Examples
+
+examples目录内为使用PyVISA连接并控制设备的例程，可以为编写Python脚本控制设备实现复杂测试流程的自动化提供参考。
 
 ## SCPI Commands
 
