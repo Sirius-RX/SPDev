@@ -56,8 +56,8 @@ examples目录内为使用PyVISA连接并控制设备的例程，可以为编写
 
 ## Pin Out
 
-![Pin_Out_sch](../assets/Pin_Out_sch.png "HR2.54接口原理图PinOut")
-![Pin_Out_pcb](../assets/Pin_Out_pcb.png "HR2.54接口PCB PinOut")
+![Pin_Out_sch](../assets/Pin_Out_sch.png "HR2.54排母接口原理图PinOut")
+![Pin_Out_pcb](../assets/Pin_Out_pcb.png "HR2.54排母接口PCB PinOut")
 
 SPSMU的HR2.54排母引脚定义为上图sch所示，注意排针连接时引脚定义需要将中间对称调换（因为排针排母的连接方式，排母在板边的内侧对应排针在板边的内侧）。
 
