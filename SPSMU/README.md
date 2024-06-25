@@ -19,6 +19,8 @@
 
 2024/06/24 Update CH343 serial chip driver
 
+2024/06/25 Update status indicate description
+
 ## Driver Installation
 
 #### Windows：
@@ -82,7 +84,9 @@ SPSMU的HR2.54排母引脚定义为上图sch所示，注意排针连接时引脚
 > 
 > `SPDev,SPSMU,SP-0002,BySirus_P-1.00`
 
-注释：无
+> [!NOTE]
+>
+> none
 
 ------
 
