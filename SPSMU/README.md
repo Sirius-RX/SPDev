@@ -8,6 +8,7 @@
   - [Connect](#connect)
   - [Examples](#examples)
   - [Pin Out](#pin-out)
+  - [IntLib](#intlib)
   - [SCPI Commands](#scpi-commands)
   - [Status Indicate](#status-indicate)
       - [RGB Light](#rgb-light)
@@ -67,6 +68,12 @@ examples目录内为使用PyVISA连接并控制设备的例程，可以为编写
 > [!NOTE]
 > 
 > SPSMU的HR2.54排母引脚定义为上图sch所示，注意排针连接时引脚定义需要将中间对称调换（因为排针排母的连接方式，排母在板边的内侧对应排针在板边的内侧）。
+
+## IntLib
+
+IntLib文件夹中的Chip_ISCLS_0613.IntLib为Altium Designer EDA软件的集成封装库，该封装库中包括了与SPSMU排母连接的排针的引脚定义。除此之外还包含了一些常用器件的封装。
+
+使用只需要使用Altium Designer打开导入即可自动完成封装库的导入。
 
 ## SCPI Commands
 
