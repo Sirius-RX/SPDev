@@ -43,10 +43,14 @@ manuals are stored in each device folders
     └── SPSMU
         ├── CH343SER.EXE
         ├── examples
-        │   ├── SPSmu_test_curr.py
-        │   ├── SPSmu_test_hizi.py
-        │   ├── SPSmu_test_hizv.py
-        │   └── SPSmu_test_volt.py
+        │   ├── SPSmu_test_fimi.py
+        │   ├── SPSmu_test_fimv.py
+        │   ├── SPSmu_test_fvmi.py
+        │   ├── SPSmu_test_fvmv.py
+        │   ├── SPSmu_test_hizimi.py
+        │   └── SPSmu_test_hizvmv.py
+        ├── IntLib
+        │   └── Chip_ISCLS_0613.IntLib
         └── README.md
 
 ## SPDev folder

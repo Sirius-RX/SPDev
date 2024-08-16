@@ -16,6 +16,8 @@
 
 ## Version
 
+2024/08/16 Update windows driver installation steps & clamp function description
+
 2024/06/22 First update
 
 2024/06/24 Update CH343 serial chip driver
@@ -27,7 +29,8 @@
 #### Windows：
 
 1. 双击安装目录下的CH343SER.EXE，下一步直至安装完成
-2. 使用任意软件连接设备
+2. 安装[NI-VISA](https://www.ni.com/en/support/downloads/drivers/download.ni-visa.html# "NI-VISA为使用以太网、GPIB、串口、USB和其他类型仪器的用户提供支持。")，如果不想通过登录NI帐号下载NI-VISA，也可以直接通过[点击此处](https://download.ni.com/support/nipkg/products/ni-v/ni-visa/24.5/offline/ni-visa_24.5.0_offline.iso "链接更新日期为2024.08.16，如果链接内容无法访问请联系sirius_rx@qq.com更新连接")直接下载
+3. 使用任意软件连接设备
 
 #### Linux：
 
@@ -73,7 +76,7 @@ examples目录内为使用PyVISA连接并控制设备的例程，可以为编写
 
 IntLib文件夹中的Chip_ISCLS_0613.IntLib为Altium Designer EDA软件的集成封装库，该封装库中包括了与SPSMU排母连接的排针的引脚定义。除此之外还包含了一些常用器件的封装。
 
-使用只需要使用Altium Designer打开导入即可自动完成封装库的导入。
+使用只需要使用Altium Designer打开文件导入即可自动完成封装库的导入。
 
 ## SCPI Commands
 
@@ -158,7 +161,7 @@ SOURce:VOLTage? [channel]
 
 > SOUR:VOLT 1,1.114514	- 设置1通道输出电压1.114514V
 
-> SOUR:VOLT? 1		      - 返回通道1当前设置的电压值
+> SOUR:VOLT? 1 - 返回通道1当前设置的电压值
 > 
 > `1.114514`
 
@@ -198,9 +201,9 @@ SOURce:CURRent? [channel]
 
 举例：
 
-> SOUR:CURR 1,1.114514	- 设置1通道输出电流1.114514uA
+> SOUR:CURR 1,1.114514 - 设置1通道输出电流1.114514uA
 
-> SOUR:CURR? 1		      - 返回通道1当前设置的电流值
+> SOUR:CURR? 1 - 返回通道1当前设置的电流值
 > 
 > `1.114514`
 
@@ -234,15 +237,15 @@ SOURce:CURRent? [channel]
 
 语法：
 
-SOURce:CLAMp:CURRent [channel],[persentage]
+SOURce:CLAMp:CURRent [channel],[I_low_persentage],[I_high_persentage]
 
 举例：
 
-> SOURce:CLAMp:CURRent 1,0.5
+> SOURce:CLAMp:CURRent 1,-0.5,0.5 - 在fv模式下，设置输出电流范围为总范围的-0.5~0.5，如输出电流范围MA50，限制输出电流-25mA~25mA
 
 > [!NOTE]
 > 
-> 此命令可以用来保护SMU设备或者输出的待测设备，但是因为钳位后会导致输出能力下降，造成实际输出与设定不符合，在运用此命令时请多加注意。参数中第二个为百分比的小数形式，例如0.1、0.2。
+> 此命令可以用来保护SMU设备或者输出的待测设备，但是因为钳位后会导致输出能力下降，可能会造成实际输出与设定不符合，在运用此命令时请多加注意。并且因为钳位未经过校准，会出现限制传入参数为0.5，但是实际作用参数等效为0.6。参数中第二、三个为百分比的小数形式，例如0.1、0.2。
 
 ------
 
@@ -252,15 +255,15 @@ SOURce:CLAMp:CURRent [channel],[persentage]
 
 语法：
 
-SOURce:CLAMp:VOLTage [channel],[persentage]
+SOURce:CLAMp:VOLTage [channel],[V_low_persentage],[V_high_persentage]
 
 举例：
 
-> SOURce:CLAMp:VOLTage 1,0.5
+> SOURce:CLAMp:VOLTage 1,-0.5,0.5
 
 > [!NOTE]
 > 
-> 此命令可以用来保护SMU设备或者输出的待测设备，但是因为钳位后会导致输出能力下降，造成实际输出与设定不符合，在运用此命令时请多加注意。参数中第二个为百分比的小数形式，例如0.1、0.2。
+> 此命令可以用来保护SMU设备或者输出的待测设备，但是因为钳位后会导致输出能力下降，可能会造成实际输出与设定不符合，在运用此命令时请多加注意。并且因为钳位未经过校准，会出现限制传入参数为0.5，但是实际作用参数等效为0.6。参数中第二、三个为百分比的小数形式，例如0.1、0.2。
 
 ------
 
@@ -314,7 +317,7 @@ MEASure:CURRent? [channel]
 
 - #### ADMIN:AD5522:SYSOut:CTRL
 
-描述：设定ad5522芯片通道与芯片系统输出相连接（PCB板中对应SMA接口）
+描述：设定AD5522芯片通道与芯片系统输出相连接（PCB板中对应SMA接口）
 
 语法：
 
