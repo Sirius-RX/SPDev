@@ -102,7 +102,7 @@ IntLib文件夹中的Chip_ISCLS_0613.IntLib为Altium Designer EDA软件的集成
 
 ------
 
-- #### SOURce:VOLTage:RANGe
+- #### SOURce:MODE
 
 描述：设置或返回通道的工作模式
 
